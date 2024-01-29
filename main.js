@@ -14,22 +14,22 @@ function runGame(userChoice) {
     case 'caillou_papier':
     case 'ciseaux_caillou':
       loses += 1;
-      gameStatus.innerHTML = `M: ${userChoice} | C: ${computerChoice} -> C Wins`
+      gameStatus.innerHTML = `H: ${userChoice} | IA: ${computerChoice} -> IA Wins`
       break;
     case 'papier_caillou':
     case 'caillou_ciseaux':
     case 'ciseaux_papier':
       wins += 1;
-      gameStatus.innerHTML = `M: ${userChoice} | C: ${computerChoice} -> M Wins`
+      gameStatus.innerHTML = `H: ${userChoice} | IA: ${computerChoice} -> H Wins`
       break;
     case 'papier_papier':
     case 'caillou_caillou':
     case 'ciseaux_ciseaux':
-      gameStatus.innerHTML = `M: ${userChoice} | C: ${computerChoice} -> Egalité`
+      gameStatus.innerHTML = `H: ${userChoice} | IA: ${computerChoice} -> Egalité`
       break;
   }
 
-  gameScore.innerHTML = `Me: ${wins} | Co: ${loses}`;
+  gameScore.innerHTML = `H: ${wins} | IA: ${loses}`;
 }
 
 paper.addEventListener("click", () => runGame("papier"));
